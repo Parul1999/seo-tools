@@ -1,0 +1,15 @@
+import java.util.*;
+class A
+{
+public static void main(String arg[ ])
+{
+float a =4.5f;
+Float b=a;
+Float k=Float.valueof(a);//Boxing
+System.out.println(a+" "+j+" "+k);
+Float c = new Float(6.0f);
+float d=c;
+float e=c.intValue(); 
+System.out.println(c+" "+d+" "+e);
+}
+}

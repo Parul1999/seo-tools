@@ -1,0 +1,9 @@
+The first step in checking your website source code is to view the actual code. Every web browser allows you to do this easily. Below are the keyboard commands for viewing your webpage source code for both PC and Mac.
+
+
+<?php
+if(isset($_POST['sub'])){
+	$data= file_get_contents($_POST['url']);
+	$html_encoded=htmlentities($data);
+	echo $html_encoded;}
+	?>

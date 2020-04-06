@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg   navbar-dark bg-dark ">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mr-auto ml-auto">
+
+      
+      
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          HTML Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="datediffer.php">Date Differ Calculator</a>
+          <a class="dropdown-item" href="calculatedate.php">Date Calculator Calculates</a>
+
+          
+        </div>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="encrypt.php">Encrypt and Decrypt Tool</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          SEO Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          
+          <a class="dropdown-item" href="viewsource.php">Get Source Code</a>
+          
+        </div>
+      </li>
+      
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Text Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="textanalyse.php">Text Analysis Tool</a>
+          <a class="dropdown-item" href="textcase.php">Text Case Converter Tool</a>
+          <a class="dropdown-item" href="imageconvertor.php">Text to Image Converter</a>
+        </div>
+      
+      </li>
+    <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Color Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+          <a class="dropdown-item" href="colorpicker.php" style="color:#222">Color Picker</a>
+          <a class="dropdown-item" href="htor.php" style="color:#222">HEX TO RGB</a>
+          <a class="dropdown-item" href="rtoh.php"style="color:#222"> RGB To HEX</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

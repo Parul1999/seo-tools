@@ -1,0 +1,99 @@
+<?php
+$sql="SELECT * From reguser Where userid='$_SESSION[uid]'";
+$result=$conn->query($sql);
+if($result->num_rows>0)
+$row=$result->fetch_assoc();
+?>
+
+
+<form action="" method="post">
+<br />
+<br />
+<h3 align="center">Edit Profile </h3>
+<hr />
+<br />
+<div class="row">
+<div class="col-md-6">
+<div class="input-group">
+<span class="input-group-addon"><i class="icofont icofont-user"></i></span>
+<input type="text" value="<?php echo $row['username'];?>" name="fn" placeholder="Full Name" class="form-control" />  
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="input-group">
+<span class="input-group-addon"><i class="icofont icofont-email"></i></span>
+<input type="email" value="<?php echo $row['emailid'];?>" name="em" placeholder="Enter E-mail" class="form-control" />
+</div>
+</div>
+ <br /><br />
+ 
+ <div class="col-md-12">
+<div class="input-group">
+<span class="input-group-addon"><i class="icofont icofont-address-book"></i></span>
+<input type="text" value="<?php echo $row['address'];?>" name="ad" placeholder="Address" class="form-control"  />
+</div>
+</div>
+ <br /><br />
+ 
+ <div class="col-md-6">
+<div class="input-group">
+<span class="input-group-addon"><i class="icofont icofont-phone"></i></span>
+<input type="number" value="<?php echo $row['phone'];?>" name="ph" placeholder="Phone No." class="form-control"  />
+</div>
+</div>
+ <br /><br />
+ 
+ <div class="col-md-6">
+<div class="input-group">
+<span class="input-group-addon"><i class="icofont icofont-location-pin"></i></span>
+<input type="text" value="<?php echo $row['city'];?>" name="ct" placeholder="Enter City" class="form-control"  />
+</div>
+</div>
+ <br /><br />
+
+<div class="col-md-6">
+<div class="input-group">
+<span class="input-group-addon"><i class="icofont icofont-location-pin"></i></span>
+<input type="text" value="<?php echo $row['state'];?>" name="st" placeholder="State" class="form-control" />
+</div>
+</div>
+ <br /><br />
+ 
+ <div class="col-md-6">
+ <div class="input-group">
+<span class="input-group-addon"><i class="icofont icofont-pin"></i></span>
+<input type="text" value="<?php echo $row['pincode'];?>" name="pin" placeholder="Pincode" class="form-control" />
+</div>
+</div>
+ <br /><br />
+
+<div class="col-md-6">
+ <input type="radio" name="rd" />Male
+ <input type="radio" name="rd" />Female
+ </div>
+<br /><br />
+
+<div class="col-md-6">
+<input type="text" value="<?php echo $row['dob'];?>" name="dob" placeholder="D.O.B" class="form-control"  />
+</div>
+ <br /><br />
+
+ <div class="col-md-12">
+<label> About</label>
+<textarea  class="form-control" name="abt" rows="2" maxlength="300"  ><?php echo $row['about'];?> </textarea> <br /> 
+<button class="btn btn-block" style="background-color:#906293; color:#fff" name="sbmt">SUBMIT</button><br /><br />
+</form>
+<?php
+if(isset($_POST['sbmt']))
+{
+	$sql="UPDATE  reguser set username='$_POST[fn]', emailid='$_POST[em]', address='$_POST[ad]', phone='$_POST[ph]', city='$_POST[ct]', state='$_POST[st]', pincode='$_POST[pin]', dob='$_POST[dob]', about='$_POST[abt]' Where userid='$_SESSION[uid]';";
+	if($conn->query($sql)===true){
+		echo "<br> <div class='alert alert-success'>
+		<i class='icofont icofont-2x icofont-check'></i>&nbsp;&nbsp; Updated Successfully!  </div>";
+	}
+	else{
+		echo "<br> <div class='alert alert-danger'>
+		<i class='icofont icofont-2x icofont-delete'></i>&nbsp;&nbsp; Error".$sql."".$conn->error."</div>";
+	}}
+	?>
